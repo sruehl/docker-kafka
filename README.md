@@ -3,9 +3,6 @@ Kafka in Docker
 
 This repository provides everything you need to run Kafka in Docker.
 
-For convenience also contains a packaged proxy that can be used to get data from
-a legacy Kafka 7 cluster into a dockerized Kafka 8.
-
 Why?
 ---
 The main hurdle of running Kafka in Docker is that it depends on Zookeeper.
@@ -19,7 +16,7 @@ Run
 ---
 
 ```bash
-docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip \`docker-machine active\`` --env ADVERTISED_PORT=9092 sruehl/docker-kafka
+docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip \`docker-machine active\`` --env ADVERTISED_PORT=9092 sruehl/kafka
 ```
 
 ```bash
@@ -34,7 +31,7 @@ kafka-console-consumer.sh --zookeeper $ZOOKEEPER --topic test
 
 In the box
 ---
-* **spotify/kafka**
+* **sruehl/kafka**
 
   The docker image with both Kafka and Zookeeper. Built from the `kafka`
   directory.
@@ -43,13 +40,13 @@ In the box
 Public Builds
 ---
 
-https://registry.hub.docker.com/u/sruehl/docker-kafka/
+https://registry.hub.docker.com/u/sruehl/kafka/
 
 
 Build from Source
 ---
 
-    docker build -t sruehl/docker-kafka kafka/
+    docker build -t sruehl/kafka .
 
 Todo
 ---
