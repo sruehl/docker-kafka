@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/sruehl/kafka:latest.svg)](https://imagelayers.io/?images=sruehl/kafka:latest 'Get your own badge on imagelayers.io')
+
 Kafka in Docker
 ===
 
